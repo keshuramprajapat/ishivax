@@ -1,9 +1,31 @@
-import { React } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Image } from "react-bootstrap";
 import "./Header.scss";
 
 function SidebarHeader() {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  const toggleNavbar = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
+  useEffect(() => {
+    if (isNavOpen) {
+      document.body.classList.add("nav-open");
+    } else {
+      document.body.classList.remove("nav-open");
+    }
+  }, [isNavOpen]);
   return (
     <>
       <div className="ishivax-custom-header" id="header">
@@ -29,19 +51,125 @@ function SidebarHeader() {
               </svg>
             </a>
           </div>
-          <div className="toggle-btn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="21.5"
-              height="21.5"
-              viewBox="0 0 21.5 21.5"
-            >
-              <path
-                data-name="Path 698"
-                d="M5.75,21.5V20H20V5.75h1.5V21.5ZM0,15.75V0H15.75V1.5H1.5V15.75Z"
-                fill="#fff"
-              />
-            </svg>
+          <div
+            className={isNavOpen ? "toggle-btn active" : "toggle-btn"}
+            onClick={toggleNavbar}
+          >
+            {!isNavOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21.5"
+                height="21.5"
+                viewBox="0 0 21.5 21.5"
+              >
+                <path
+                  d="M5.75,21.5V20H20V5.75h1.5V21.5ZM0,15.75V0H15.75V1.5H1.5V15.75Z"
+                  fill="#fff"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16.061"
+                height="16.06"
+                viewBox="0 0 16.061 16.06"
+              >
+                <path
+                  d="M8.03,9.091l-6.97,6.97L0,15,6.97,8.03,0,1.061,1.06,0,8.03,6.97,15,0l1.06,1.061L9.091,8.03,16.061,15,15,16.061Z"
+                  fill="#fff"
+                />
+              </svg>
+            )}
+          </div>
+        </div>
+      </div>
+      <div className={isNavOpen ? "menuOpen active" : "menuOpen"}>
+        <div className="container">
+          <div className="menu-box">
+            <ul className="menu-links">
+              <li>
+                <Link to="">HOME</Link>
+              </li>
+              <li>
+                <Link to="">About</Link>
+              </li>
+              <li>
+                <Link to="">Services</Link>
+              </li>
+              <li>
+                <Link to="">Blog</Link>
+              </li>
+              <li>
+                <Link to="">Contact US</Link>
+              </li>
+            </ul>
+            <ul className="social-links">
+              <li>
+                <a href="https://www.instagram.com/" target="_blank">
+                  INSTAGRAM
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/" target="_blank">
+                  FACEBOOK
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/" target="_blank">
+                  LINKEDIN
+                </a>
+              </li>
+              <li>
+                <button
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  className="btn"
+                >
+                  Get Quote
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 211.6 75.729"
+                    data-v-7ab2290a=""
+                  >
+                    <defs data-v-7ab2290a="">
+                      <clipPath id="clippy" data-v-7ab2290a="">
+                        <rect
+                          x="0"
+                          y={isHovered ? "0" : "-100%"}
+                          width="211.6"
+                          height="75.729"
+                          data-v-7ab2290a=""
+                          style={{
+                            transition: "y 0.3s ease",
+                          }}
+                        ></rect>
+                      </clipPath>
+                    </defs>
+                    <path
+                      d="M472.41,2695.516h150.52v-61.339l-17.431-12.39H413.329v61.043l17.857,12.686H472.41Z"
+                      transform="translate(-412.329 -2620.787)"
+                      strokeMiterlimit="10"
+                      strokeWidth="2"
+                      data-v-7ab2290a=""
+                      style={{ fill: "#000030" }}
+                    ></path>
+                    <g
+                      clipPath="url(#clippy)"
+                      className="clip"
+                      data-v-7ab2290a=""
+                    >
+                      <path
+                        d="M472.41,2695.516h150.52v-61.339l-17.431-12.39H413.329v61.043l17.857,12.686H472.41Z"
+                        transform="translate(-412.329 -2620.787)"
+                        strokeMiterlimit="10"
+                        strokeWidth="2"
+                        data-v-7ab2290a=""
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

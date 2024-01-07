@@ -35,7 +35,7 @@ function TheLayout() {
           <div className="main_content_section">
             <Outlet />
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </>
       )}
     </>

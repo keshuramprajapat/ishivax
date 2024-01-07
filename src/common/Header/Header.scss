@@ -42,3 +42,121 @@
         }
     }
 }
+
+.menuOpen {
+    background: linear-gradient(243.18deg, #000040 27.92%, #000123 100%);
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    padding: 10rem 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(-100%);
+    transition: all .8s;
+    &.active {
+        transform: unset;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        max-width: 140rem;
+        .menu-box {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            .menu-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    a {
+                        font-size: 6rem;
+                        font-weight: 300;
+                        color: #FFF;
+                        position: relative;
+                        text-transform: uppercase;
+                        letter-spacing: 0.03em;
+                        &:before {
+                            content: "[";
+                            color: #0075FF;
+                            margin-right: 1rem;
+                        }
+                        &:after {
+                            content: "]";
+                            color: #0075FF;
+                            margin-left: 1rem;
+                        }
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 6rem;
+                    }
+                }
+            }
+            .social-links {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                li {
+                    a {
+                        font-size: 3rem;
+                        font-weight: 300;
+                        color: #FFF;
+                        letter-spacing: 0.03em;
+                        color: #0075FF;
+                    }
+                    &:not(:last-child) {
+                        margin-bottom: 6rem;
+                    }
+                    &:last-child {
+                        margin-top: 4rem;
+                        button {
+                            position: relative;
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+                            box-shadow: none;
+                            width: 100%;
+                            min-width: 21rem;
+                            height: 8rem;
+                            z-index: 1;
+                            font-size: 1.6rem;
+                            text-transform: uppercase;
+                            letter-spacing: 0.03em;
+                            color: #FFF;
+                            svg {
+                                path[data-v-7ab2290a] {
+                                    stroke: #2badf8;
+                                }
+                                path[data-v-7ab2290a] {
+                                    stroke: #2badf8;
+                                }
+                            }
+                            .clip path[data-v-7ab2290a] {
+                                fill: #2badf8;
+                            }
+                            svg[data-v-7ab2290a] {
+                                z-index: -1;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                display: block;
+                            }
+                            &:focus {
+                                color: #FFF;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

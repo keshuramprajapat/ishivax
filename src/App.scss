@@ -85,6 +85,10 @@ body {
     letter-spacing: 0.03em;
     background: #000123;
     background: linear-gradient(243.18deg, #000040 27.92%, #000123 100%);
+    padding-right: 0px;
+    &.nav-open {
+        overflow: hidden;
+    }
 }
 
 .container {
