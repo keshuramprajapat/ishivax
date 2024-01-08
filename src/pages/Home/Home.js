@@ -102,7 +102,7 @@ function Home() {
         </section>
       ) : (
         <>
-          <section className="our-solutions-section" id="solutions">
+          {/* <section className="our-solutions-section" id="solutions">
             <div className="container">
               <div className="section-title">
                 <h2>Our Eminent Solutions</h2>
@@ -430,7 +430,7 @@ function Home() {
                 </div>
               </Swiper>
             </div>
-          </section>
+          </section> */}
 
           <section className="portfolio-section">
             <div className="container">
