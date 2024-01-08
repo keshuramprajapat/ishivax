@@ -6,7 +6,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/bundle";
-import TheLayout from "../../common/MainLayout/TheLayout";
 
 import "./Home.scss";
 import Footer from "../../common/Footer/Footer";
@@ -102,7 +101,7 @@ function Home() {
         </section>
       ) : (
         <>
-          {/* <section className="our-solutions-section" id="solutions">
+          <section className="our-solutions-section" id="solutions">
             <div className="container">
               <div className="section-title">
                 <h2>Our Eminent Solutions</h2>
@@ -430,7 +429,7 @@ function Home() {
                 </div>
               </Swiper>
             </div>
-          </section> */}
+          </section>
 
           <section className="portfolio-section">
             <div className="container">

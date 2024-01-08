@@ -154,3 +154,33 @@ section {
         color: #FFFFFF;
     }
 }
+
+.page-load-before-header {
+    height: 100vh;
+    position: relative;
+    transition: all 1s ease;
+    .logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 1s ease;
+        img {
+            max-height: 5.5rem;
+            transition: .8s;
+            margin-top: 4rem;
+        }
+    }
+    &.logo-animation-start {
+        .logo {
+            position: absolute;
+            top: 3rem;
+            left: 0;
+            transform: none;
+            img {
+                max-height: 3.5rem;
+                margin-top: 0rem;
+            }
+        }
+    }
+}
