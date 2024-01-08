@@ -52,3 +52,15 @@
         }
     }
 }
+
+@media (max-width: 767px) {
+    .loader-page {
+        padding: 5rem 2rem;
+        .loading-box {
+            padding: 3rem;
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+}

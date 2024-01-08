@@ -160,3 +160,104 @@
         }
     }
 }
+
+// Responsive css
+@media (max-width:1366px) {
+    .menuOpen {
+        .container {
+            .menu-box {
+                .menu-links {
+                    li {
+                        a {
+                            font-size: 4rem;
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: 5rem;
+                        }
+                    }
+                }
+                .social-links {
+                    li {
+                        a {
+                            font-size: 2.6rem;
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: 5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .menuOpen {
+        .container {
+            .menu-box {
+                .menu-links {
+                    li {
+                        a {
+                            font-size: 3rem;
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: 4rem;
+                        }
+                    }
+                }
+                .social-links {
+                    li {
+                        a {
+                            font-size: 2.2rem;
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: 4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .menuOpen {
+        padding-bottom: 3rem;
+        .container {
+            width: 90%;
+            .menu-box {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                .menu-links {
+                    li {
+                        a {
+                            font-size: 2rem;
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: 2rem;
+                        }
+                    }
+                }
+                .social-links {
+                    margin-top: 3rem;
+                    li {
+                        a {
+                            font-size: 1.6rem;
+                        }
+                        &:not(:last-child) {
+                            margin-bottom: 1.5rem;
+                        }
+                        &:last-child {
+                            margin-top: 3rem;
+                            button {
+                                min-width: 18rem;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

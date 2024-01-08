@@ -95,6 +95,8 @@
 .our-solutions-section {
     min-height: 100vh;
     overflow: hidden;
+    display: flex;
+    align-items: center;
     .slide-item-box {
         display: flex;
         align-items: center;
@@ -102,8 +104,13 @@
         width: 100%;
         max-width: 92.6rem;
         margin: 0 auto;
+        gap: 3rem;
         .solutions-image {
             max-width: 36.2rem;
+            width: 100%;
+            img {
+                width: 100%;
+            }
         }
         .solutions-detail {
             max-width: 42.7rem;
@@ -129,8 +136,8 @@
         .slider-buttons {
             position: absolute;
             top: 50%;
-            left: -5rem;
-            right: -5rem;
+            left: 0rem;
+            right: 0rem;
             transform: translate(0%, -50%);
             display: flex;
             align-items: center;
@@ -159,6 +166,12 @@
 }
 
 .portfolio-section {
+    display: flex;
+    align-items: center;
+    >div {
+        display: block;
+        width: 100%;
+    }
     .our-work-slider {
         margin-top: 5rem;
         .swiper-slide {
@@ -434,5 +447,136 @@
     to {
         -webkit-transform: translateX(0);
         transform: translateX(0);
+    }
+}
+
+// Responsive css
+@media (max-width:1366px) {
+    .banner-section {
+        .banner-content {
+            max-width: 640px;
+            padding: 0 2rem;
+            h1 {
+                font-size: 6.4rem;
+                img {
+                    max-height: 5rem;
+                }
+            }
+        }
+    }
+    .our-solutions-section {
+        .slide-item-box {
+            .solutions-detail {
+                h3 {
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1199px) {
+    .our-solutions-section {
+        .slide-item-box {
+            .solutions-detail {
+                h3 {
+                    font-size: 3.6rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .banner-section {
+        .banner-content {
+            h1 {
+                font-size: 4.4rem;
+                img {
+                    max-width: 3.8rem;
+                }
+            }
+        }
+    }
+    .client-testimonails-section {
+        .logos-section {
+            img {
+                max-height: 7rem;
+            }
+        }
+    }
+    .client-testimonails-section {
+        .client-testimonails-slider {
+            padding-bottom: 7rem;
+            .slider-buttons {
+                right: unset;
+                left: 50%;
+                transform: translate(-50%, 0%);
+            }
+        }
+    }
+    .our-solutions-section {
+        .slide-item-box {
+            .solutions-detail {
+                h3 {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .banner-section {
+        .banner-content {
+            h1 {
+                font-size: 3.6rem;
+            }
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+    .our-solutions-section {
+        padding-top: 10rem;
+        .solutions-slider {
+            overflow: hidden;
+        }
+        .slide-item-box {
+            flex-direction: column;
+            .solutions-detail {
+                h3 {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+    }
+    .our-work-btn {
+        justify-content: flex-start;
+        margin-top: 2rem;
+    }
+    .our-solutions-section {
+        padding-top: 10rem;
+    }
+    .client-testimonails-section {
+        .client-testimonails-slider {
+            .slide-item-box {
+                p {
+                    font-size: 16px;
+                }
+                .client-detail {
+                    .client-name {
+                        width: 10rem;
+                    }
+                    .client-profile {
+                        padding-left: 2rem;
+                        width: calc(100% - 10rem);
+                        span {
+                            width: calc(100% - 11rem);
+                        }
+                    }
+                }
+            }
+        }
     }
 }

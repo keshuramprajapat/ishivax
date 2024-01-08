@@ -141,6 +141,9 @@ section {
     align-items: center;
     column-gap: 1.2rem;
     color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+    border: 0;
     span {
         background: #0075FF;
         width: 5rem;
@@ -155,32 +158,76 @@ section {
     }
 }
 
-.page-load-before-header {
-    height: 100vh;
-    position: relative;
-    transition: all 1s ease;
-    .logo {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+.bg-dark {
+    background-color: #010101 !important;
+    .page-load-before-header {
+        height: 100vh;
+        position: relative;
         transition: all 1s ease;
-        img {
-            max-height: 5.5rem;
-            transition: .8s;
-            margin-top: 4rem;
-        }
-    }
-    &.logo-animation-start {
         .logo {
             position: absolute;
-            top: 3rem;
-            left: 0;
-            transform: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 1s ease;
             img {
-                max-height: 3.5rem;
-                margin-top: 0rem;
+                max-height: 5.5rem;
+                transition: .8s;
+                margin-top: 4rem;
             }
         }
+        &.logo-animation-start {
+            .logo {
+                position: absolute;
+                top: 3rem;
+                left: 0;
+                transform: none;
+                img {
+                    max-height: 3.5rem;
+                    margin-top: 0rem;
+                }
+            }
+        }
+    }
+}
+
+// Responsve css
+@media (max-width:1366px) {
+    .section-title {
+        margin-bottom: 8rem;
+        h2 {
+            font-size: 4.6rem;
+        }
+    }
+}
+
+@media (max-width:1199px) {
+    .section-title {
+        margin-bottom: 6rem;
+        h2 {
+            font-size: 4rem;
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .section-title {
+        h2 {
+            font-size: 3.4rem;
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .section-title {
+        h2 {
+            font-size: 2.8rem;
+        }
+        &.text-left {
+            margin-bottom: 2rem;
+        }
+    }
+    section {
+        padding: 5rem 0;
     }
 }

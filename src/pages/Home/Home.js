@@ -33,6 +33,21 @@ function Home() {
       });
     }
   };
+
+  const breakpoints = {
+    1199: {
+      slidesPerView: 3.5,
+    },
+    991: {
+      slidesPerView: 2.2,
+    },
+    768: {
+      slidesPerView: 2.2,
+    },
+    480: {
+      slidesPerView: 1.2,
+    },
+  };
   return (
     <>
       <div className="wave-animation">
@@ -137,7 +152,7 @@ function Home() {
                       />
                     </div>
                     <div className="solutions-detail">
-                      <h3>Microsoft Technologies</h3>
+                      <h3>Microsoft <br/> Technologies</h3>
                       <p>
                         iShivax specialises in Microsoft development and
                         consulting to drive innovation and growth…
@@ -171,7 +186,7 @@ function Home() {
                       />
                     </div>
                     <div className="solutions-detail">
-                      <h3>Digital Marketing</h3>
+                      <h3>Digital <br/> Marketing</h3>
                       <p>
                         iShivax provides Digital Marketing services and virtual
                         assistants that can engage users,…
@@ -196,7 +211,7 @@ function Home() {
                     </div>
                   </div>
                 </SwiperSlide>
-                <SwiperSlide>
+                {/* <SwiperSlide>
                   <div className="slide-item-box">
                     <div className="solutions-image">
                       <Image
@@ -205,7 +220,7 @@ function Home() {
                       />
                     </div>
                     <div className="solutions-detail">
-                      <h3>IOT Internet of Things</h3>
+                      <h3>IOT Internet of <br/> Things</h3>
                       <p>
                         Lorem Ipsum is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been the
@@ -240,7 +255,7 @@ function Home() {
                       />
                     </div>
                     <div className="solutions-detail">
-                      <h3>App Development</h3>
+                      <h3>App <br/> Development</h3>
                       <p>
                         We harness the latest technologies, tools, frameworks
                         and SDKs to develop custom…
@@ -274,7 +289,7 @@ function Home() {
                       />
                     </div>
                     <div className="solutions-detail">
-                      <h3>Web Designing</h3>
+                      <h3>Web <br/> Designing</h3>
                       <p>
                         iShivax collaborates with start-ups, entrepreneurs &
                         businesses to develop and innovate revolutionary…
@@ -335,7 +350,7 @@ function Home() {
                     <div className="solutions-image">
                       <Image
                         src="/images/crm-services.svg"
-                        alt="CRM Services"
+                        alt="CRM <br/> Services"
                       />
                     </div>
                     <div className="solutions-detail">
@@ -395,7 +410,7 @@ function Home() {
                       </Link>
                     </div>
                   </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
 
                 <div className="slider-buttons">
                   <div className="swiper-custom-button-prev">
@@ -432,287 +447,302 @@ function Home() {
           </section>
 
           <section className="portfolio-section">
-            <div className="container">
-              <div className="row align-items-end">
-                <div className="col-lg-7">
-                  <div className="section-title text-left mb-0">
-                    <h2>
-                      Explore What <br /> We Have Done
-                    </h2>
-                    <p>
-                      Check how ishivax help clients achieve their goals and
-                      stay ahead in the digital age.
-                    </p>
+            <div className="">
+              <div className="container">
+                <div className="row align-items-end">
+                  <div className="col-lg-7">
+                    <div className="section-title text-left mb-0">
+                      <h2>
+                        Explore What <br /> We Have Done
+                      </h2>
+                      <p>
+                        Check how ishivax help clients achieve their goals and
+                        stay ahead in the digital age.
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div className="col-lg-5">
-                  <div className="our-work-btn">
-                    <Link to="" className="btn btn-arrow">
-                      Our Work
-                      <span>
-                        {" "}
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="14.958"
-                          height="11.11"
-                          viewBox="0 0 14.958 11.11"
-                        >
-                          <path
-                            d="M8.873,10.891a.749.749,0,0,1,0-1.06L12.4,6.305H.75a.75.75,0,0,1,0-1.5H12.4L8.873,1.281A.75.75,0,1,1,9.933.22l4.805,4.805a.751.751,0,0,1,0,1.061L9.933,10.891a.75.75,0,0,1-1.06,0Z"
-                            transform="translate(0 0)"
-                            fill="#fff"
-                          />
-                        </svg>
-                      </span>
-                    </Link>
+                  <div className="col-lg-5">
+                    <div className="our-work-btn">
+                      <Link to="" className="btn btn-arrow">
+                        Our Work
+                        <span>
+                          {" "}
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="14.958"
+                            height="11.11"
+                            viewBox="0 0 14.958 11.11"
+                          >
+                            <path
+                              d="M8.873,10.891a.749.749,0,0,1,0-1.06L12.4,6.305H.75a.75.75,0,0,1,0-1.5H12.4L8.873,1.281A.75.75,0,1,1,9.933.22l4.805,4.805a.751.751,0,0,1,0,1.061L9.933,10.891a.75.75,0,0,1-1.06,0Z"
+                              transform="translate(0 0)"
+                              fill="#fff"
+                            />
+                          </svg>
+                        </span>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
+              <Swiper
+                modules={[Navigation, Autoplay, A11y]}
+                // spaceBetween={30}
+                breakpoints={breakpoints}
+                // slidesPerView={3.5}
+                slidesPerGroup={1}
+                centeredSlides
+                loop={true}
+                // navigation={{ clickable: true }}
+                autoplay={{
+                  delay: 1500,
+                  disableOnInteraction: true,
+                  pauseOnMouseEnter: true,
+                }}                
+                className="our-work-slider"
+              >
+                <SwiperSlide>
+                  <div className="design-box-3d">
+                    <div className="slide-item-box">
+                      <div className="corner-design">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div className="portfolio-header">
+                        <h3>Landor</h3>
+                        <Link to="/" className="portfolio-link-btn">
+                          View Live Site
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="13.542"
+                            height="10.099"
+                            viewBox="0 0 13.542 10.099"
+                          >
+                            <path
+                              id="Path_712"
+                              data-name="Path 712"
+                              d="M7.961,9.879a.75.75,0,0,1,0-1.06L10.981,5.8H.75a.75.75,0,0,1,0-1.5H10.98L7.961,1.281A.75.75,0,0,1,9.023.22l4.3,4.3a.751.751,0,0,1,0,1.061l-4.3,4.3a.751.751,0,0,1-1.061,0Z"
+                              transform="translate(0 0)"
+                              fill="#fff"
+                            />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="portfolio-image">
+                        <div className="image-wrapper">
+                          <Image
+                            src="/images/our-work/landor.png"
+                            alt="Landor"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="design-box-3d">
+                    <div className="slide-item-box">
+                      <div className="corner-design">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div className="portfolio-header">
+                        <h3>Financial Forward</h3>
+                        <Link to="/" className="portfolio-link-btn">
+                          View Live Site
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="13.542"
+                            height="10.099"
+                            viewBox="0 0 13.542 10.099"
+                          >
+                            <path
+                              id="Path_712"
+                              data-name="Path 712"
+                              d="M7.961,9.879a.75.75,0,0,1,0-1.06L10.981,5.8H.75a.75.75,0,0,1,0-1.5H10.98L7.961,1.281A.75.75,0,0,1,9.023.22l4.3,4.3a.751.751,0,0,1,0,1.061l-4.3,4.3a.751.751,0,0,1-1.061,0Z"
+                              transform="translate(0 0)"
+                              fill="#fff"
+                            />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="portfolio-image">
+                        <div className="image-wrapper">
+                          <Image
+                            src="/images/our-work/financial-forward.png"
+                            alt="Financial Forward"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="design-box-3d">
+                    <div className="slide-item-box">
+                      <div className="corner-design">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div className="portfolio-header">
+                        <h3>Quilla</h3>
+                        <Link to="/" className="portfolio-link-btn">
+                          View Live Site
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="13.542"
+                            height="10.099"
+                            viewBox="0 0 13.542 10.099"
+                          >
+                            <path
+                              id="Path_712"
+                              data-name="Path 712"
+                              d="M7.961,9.879a.75.75,0,0,1,0-1.06L10.981,5.8H.75a.75.75,0,0,1,0-1.5H10.98L7.961,1.281A.75.75,0,0,1,9.023.22l4.3,4.3a.751.751,0,0,1,0,1.061l-4.3,4.3a.751.751,0,0,1-1.061,0Z"
+                              transform="translate(0 0)"
+                              fill="#fff"
+                            />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="portfolio-image">
+                        <div className="image-wrapper">
+                          <Image
+                            src="/images/our-work/quilla.png"
+                            alt="Quilla"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="design-box-3d">
+                    <div className="slide-item-box">
+                      <div className="corner-design">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div className="portfolio-header">
+                        <h3>Quilla</h3>
+                        <Link to="/" className="portfolio-link-btn">
+                          View Live Site
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="13.542"
+                            height="10.099"
+                            viewBox="0 0 13.542 10.099"
+                          >
+                            <path
+                              id="Path_712"
+                              data-name="Path 712"
+                              d="M7.961,9.879a.75.75,0,0,1,0-1.06L10.981,5.8H.75a.75.75,0,0,1,0-1.5H10.98L7.961,1.281A.75.75,0,0,1,9.023.22l4.3,4.3a.751.751,0,0,1,0,1.061l-4.3,4.3a.751.751,0,0,1-1.061,0Z"
+                              transform="translate(0 0)"
+                              fill="#fff"
+                            />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="portfolio-image">
+                        <div className="image-wrapper">
+                          <Image
+                            src="/images/our-work/quilla.png"
+                            alt="Quilla"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="design-box-3d">
+                    <div className="slide-item-box">
+                      <div className="corner-design">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div className="portfolio-header">
+                        <h3>Quilla</h3>
+                        <Link to="/" className="portfolio-link-btn">
+                          View Live Site
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="13.542"
+                            height="10.099"
+                            viewBox="0 0 13.542 10.099"
+                          >
+                            <path
+                              id="Path_712"
+                              data-name="Path 712"
+                              d="M7.961,9.879a.75.75,0,0,1,0-1.06L10.981,5.8H.75a.75.75,0,0,1,0-1.5H10.98L7.961,1.281A.75.75,0,0,1,9.023.22l4.3,4.3a.751.751,0,0,1,0,1.061l-4.3,4.3a.751.751,0,0,1-1.061,0Z"
+                              transform="translate(0 0)"
+                              fill="#fff"
+                            />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="portfolio-image">
+                        <div className="image-wrapper">
+                          <Image
+                            src="/images/our-work/quilla.png"
+                            alt="Quilla"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <div className="design-box-3d">
+                    <div className="slide-item-box">
+                      <div className="corner-design">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                      <div className="portfolio-header">
+                        <h3>Financial Forward</h3>
+                        <Link to="/" className="portfolio-link-btn">
+                          View Live Site
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="13.542"
+                            height="10.099"
+                            viewBox="0 0 13.542 10.099"
+                          >
+                            <path
+                              id="Path_712"
+                              data-name="Path 712"
+                              d="M7.961,9.879a.75.75,0,0,1,0-1.06L10.981,5.8H.75a.75.75,0,0,1,0-1.5H10.98L7.961,1.281A.75.75,0,0,1,9.023.22l4.3,4.3a.751.751,0,0,1,0,1.061l-4.3,4.3a.751.751,0,0,1-1.061,0Z"
+                              transform="translate(0 0)"
+                              fill="#fff"
+                            />
+                          </svg>
+                        </Link>
+                      </div>
+                      <div className="portfolio-image">
+                        <div className="image-wrapper">
+                          <Image
+                            src="/images/our-work/financial-forward.png"
+                            alt="Financial Forward"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              </Swiper>
             </div>
-            <Swiper
-              modules={[Navigation, Autoplay, A11y]}
-              // spaceBetween={30}
-              slidesPerView={3.5}
-              slidesPerGroup={1}
-              centeredSlides
-              loop={true}
-              // navigation={{ clickable: true }}
-              autoplay={{
-                delay: 1500,
-                disableOnInteraction: true,
-                pauseOnMouseEnter: true,
-              }}
-              className="our-work-slider"
-            >
-              <SwiperSlide>
-                <div className="design-box-3d">
-                  <div className="slide-item-box">
-                    <div className="corner-design">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div className="portfolio-header">
-                      <h3>Landor</h3>
-                      <Link to="/" className="portfolio-link-btn">
-                        View Live Site
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="13.542"
-                          height="10.099"
-                          viewBox="0 0 13.542 10.099"
-                        >
-                          <path
-                            id="Path_712"
-                            data-name="Path 712"
-                            d="M7.961,9.879a.75.75,0,0,1,0-1.06L10.981,5.8H.75a.75.75,0,0,1,0-1.5H10.98L7.961,1.281A.75.75,0,0,1,9.023.22l4.3,4.3a.751.751,0,0,1,0,1.061l-4.3,4.3a.751.751,0,0,1-1.061,0Z"
-                            transform="translate(0 0)"
-                            fill="#fff"
-                          />
-                        </svg>
-                      </Link>
-                    </div>
-                    <div className="portfolio-image">
-                      <div className="image-wrapper">
-                        <Image src="/images/our-work/landor.png" alt="Landor" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="design-box-3d">
-                  <div className="slide-item-box">
-                    <div className="corner-design">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div className="portfolio-header">
-                      <h3>Financial Forward</h3>
-                      <Link to="/" className="portfolio-link-btn">
-                        View Live Site
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="13.542"
-                          height="10.099"
-                          viewBox="0 0 13.542 10.099"
-                        >
-                          <path
-                            id="Path_712"
-                            data-name="Path 712"
-                            d="M7.961,9.879a.75.75,0,0,1,0-1.06L10.981,5.8H.75a.75.75,0,0,1,0-1.5H10.98L7.961,1.281A.75.75,0,0,1,9.023.22l4.3,4.3a.751.751,0,0,1,0,1.061l-4.3,4.3a.751.751,0,0,1-1.061,0Z"
-                            transform="translate(0 0)"
-                            fill="#fff"
-                          />
-                        </svg>
-                      </Link>
-                    </div>
-                    <div className="portfolio-image">
-                      <div className="image-wrapper">
-                        <Image
-                          src="/images/our-work/financial-forward.png"
-                          alt="Financial Forward"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="design-box-3d">
-                  <div className="slide-item-box">
-                    <div className="corner-design">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div className="portfolio-header">
-                      <h3>Quilla</h3>
-                      <Link to="/" className="portfolio-link-btn">
-                        View Live Site
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="13.542"
-                          height="10.099"
-                          viewBox="0 0 13.542 10.099"
-                        >
-                          <path
-                            id="Path_712"
-                            data-name="Path 712"
-                            d="M7.961,9.879a.75.75,0,0,1,0-1.06L10.981,5.8H.75a.75.75,0,0,1,0-1.5H10.98L7.961,1.281A.75.75,0,0,1,9.023.22l4.3,4.3a.751.751,0,0,1,0,1.061l-4.3,4.3a.751.751,0,0,1-1.061,0Z"
-                            transform="translate(0 0)"
-                            fill="#fff"
-                          />
-                        </svg>
-                      </Link>
-                    </div>
-                    <div className="portfolio-image">
-                      <div className="image-wrapper">
-                        <Image src="/images/our-work/quilla.png" alt="Quilla" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="design-box-3d">
-                  <div className="slide-item-box">
-                    <div className="corner-design">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div className="portfolio-header">
-                      <h3>Quilla</h3>
-                      <Link to="/" className="portfolio-link-btn">
-                        View Live Site
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="13.542"
-                          height="10.099"
-                          viewBox="0 0 13.542 10.099"
-                        >
-                          <path
-                            id="Path_712"
-                            data-name="Path 712"
-                            d="M7.961,9.879a.75.75,0,0,1,0-1.06L10.981,5.8H.75a.75.75,0,0,1,0-1.5H10.98L7.961,1.281A.75.75,0,0,1,9.023.22l4.3,4.3a.751.751,0,0,1,0,1.061l-4.3,4.3a.751.751,0,0,1-1.061,0Z"
-                            transform="translate(0 0)"
-                            fill="#fff"
-                          />
-                        </svg>
-                      </Link>
-                    </div>
-                    <div className="portfolio-image">
-                      <div className="image-wrapper">
-                        <Image src="/images/our-work/quilla.png" alt="Quilla" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="design-box-3d">
-                  <div className="slide-item-box">
-                    <div className="corner-design">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div className="portfolio-header">
-                      <h3>Quilla</h3>
-                      <Link to="/" className="portfolio-link-btn">
-                        View Live Site
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="13.542"
-                          height="10.099"
-                          viewBox="0 0 13.542 10.099"
-                        >
-                          <path
-                            id="Path_712"
-                            data-name="Path 712"
-                            d="M7.961,9.879a.75.75,0,0,1,0-1.06L10.981,5.8H.75a.75.75,0,0,1,0-1.5H10.98L7.961,1.281A.75.75,0,0,1,9.023.22l4.3,4.3a.751.751,0,0,1,0,1.061l-4.3,4.3a.751.751,0,0,1-1.061,0Z"
-                            transform="translate(0 0)"
-                            fill="#fff"
-                          />
-                        </svg>
-                      </Link>
-                    </div>
-                    <div className="portfolio-image">
-                      <div className="image-wrapper">
-                        <Image src="/images/our-work/quilla.png" alt="Quilla" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="design-box-3d">
-                  <div className="slide-item-box">
-                    <div className="corner-design">
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                      <span></span>
-                    </div>
-                    <div className="portfolio-header">
-                      <h3>Financial Forward</h3>
-                      <Link to="/" className="portfolio-link-btn">
-                        View Live Site
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="13.542"
-                          height="10.099"
-                          viewBox="0 0 13.542 10.099"
-                        >
-                          <path
-                            id="Path_712"
-                            data-name="Path 712"
-                            d="M7.961,9.879a.75.75,0,0,1,0-1.06L10.981,5.8H.75a.75.75,0,0,1,0-1.5H10.98L7.961,1.281A.75.75,0,0,1,9.023.22l4.3,4.3a.751.751,0,0,1,0,1.061l-4.3,4.3a.751.751,0,0,1-1.061,0Z"
-                            transform="translate(0 0)"
-                            fill="#fff"
-                          />
-                        </svg>
-                      </Link>
-                    </div>
-                    <div className="portfolio-image">
-                      <div className="image-wrapper">
-                        <Image
-                          src="/images/our-work/financial-forward.png"
-                          alt="Financial Forward"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
           </section>
 
           <section className="client-testimonails-section">

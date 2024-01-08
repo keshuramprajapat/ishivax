@@ -45,6 +45,7 @@ function TheLayout() {
       {loadingProgress < 100 ? (
         <Loader isLoading={isLoading} setLoading={setLoading} />
       ) : isLoading ? (
+        <div className="bg-dark">
         <div
           // className="ishivax-custom-header page-load-before-header"
           className={`ishivax-custom-header ${
@@ -59,6 +60,7 @@ function TheLayout() {
               <Image src="/images/logo.png" alt="IShivax" />
             </Link>
           </div>
+        </div>
         </div>
       ) : (
         <>
